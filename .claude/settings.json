@@ -1,0 +1,49 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run build*)",
+      "Bash(npm run watch*)",
+      "Bash(npm install*)",
+      "Bash(npm run build --workspace*)",
+      "Bash(node src/*/dist/index.js*)",
+      "Bash(npx @modelcontextprotocol/inspector*)",
+      "Bash(git status)",
+      "Bash(git diff*)",
+      "Bash(git log*)",
+      "Bash(git add*)",
+      "Bash(git commit*)",
+      "Bash(git push*)",
+      "Bash(git fetch*)",
+      "Bash(git checkout*)",
+      "Bash(git branch*)",
+      "Bash(git pull*)",
+      "Bash(ls*)",
+      "Bash(cat*)",
+      "Bash(node --version)",
+      "Bash(npm --version)",
+      "Bash(python3 --version)"
+    ],
+    "deny": []
+  },
+  "mcpServers": {
+    "filesystem": {
+      "command": "node",
+      "args": [
+        "src/filesystem/dist/index.js",
+        "/home/user/servers"
+      ]
+    },
+    "memory": {
+      "command": "node",
+      "args": [
+        "src/memory/dist/index.js"
+      ]
+    },
+    "sequential-thinking": {
+      "command": "node",
+      "args": [
+        "src/sequentialthinking/dist/index.js"
+      ]
+    }
+  }
+}

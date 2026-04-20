@@ -1,0 +1,55 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/dist": false
+  },
+
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/package-lock.json": true
+  },
+
+  "github.copilot.chat.codeGeneration.useInstructionFiles": true,
+  "github.copilot.chat.codeGeneration.instructions": [
+    {
+      "text": "This is the Anthropic MCP reference servers repo. Each server lives in src/<name>/ and is a standalone TypeScript or Python npm workspace. Always use the @modelcontextprotocol/sdk patterns from existing servers as reference."
+    },
+    {
+      "text": "For TypeScript servers: import from @modelcontextprotocol/sdk/server/index.js and @modelcontextprotocol/sdk/server/stdio.js. Use ES modules (type: module). Build output goes to dist/."
+    },
+    {
+      "text": "Prefer explicit error types and use Zod schemas for input validation matching the MCP spec."
+    }
+  ],
+
+  "github.copilot.chat.localeOverride": "en",
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
+  },
+
+  "eslint.workingDirectories": [{ "mode": "auto" }],
+  "eslint.validate": ["typescript"],
+
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "terminal.integrated.env.linux": {
+    "NODE_OPTIONS": "--experimental-vm-modules"
+  }
+}
